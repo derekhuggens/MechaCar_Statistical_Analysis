@@ -8,6 +8,7 @@ Prototype Vehicle Statistical Analysis with R
 ## Linear Regression to Predict MPG
 
 Linear Model of MPG Summary Statistics
+
 ![Deliverable 1](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/ae465cc5578a857715b55b0984917000f5025569/README_IMAGES/deliverable1summary.png)
 
 Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
@@ -20,9 +21,11 @@ Does this linear model predict mpg of MechaCar prototypes effectively? Why or wh
 ### Summary Statistics on Suspension Coils
 
 Total Summary Statistics of Suspension Coil's PSI Values
+
 ![Deliverable 2](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/a859769fd774c63718e1b7e37272ae922fefbde3/README_IMAGES/deliverable_2_total_summary.png)
 
 Lot Summary Statistics of Suspension Coil's PSI Values
+
 ![Deliverable 2](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/e130a12b894e3b93f3d8955226ce62b75bb5a381/README_IMAGES/deliverable_2_lot_summary.png)
 
 Write a short summary using screenshots from your total_summary and lot_summary dataframes, and address the following question:
