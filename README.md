@@ -34,6 +34,22 @@ The design specifications for the MechaCar suspension coils dictate that the var
 
 ## T-Tests on Suspension Coils
 
+T-TEST to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 PSI
+
+![DELIVERABLE 3](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/e120b25de40702746ebbdbc45e66f9d6fbfeaa2a/README_IMAGES/one_sample_t_test.png)
+
+T-TEST to determine if the PSI across manufacturing lot 1 is statistically different from the population mean of 1,500 PSI
+
+![DELIVERABLE 3](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/3bf5338012bad8fa6bb9a3d4387e2aca676c5b9d/README_IMAGES/lot1.png)
+
+T-TEST to determine if the PSI across manufacturing lot 2 is statistically different from the population mean of 1,500 PSI
+
+![DELIVERABLE 3](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/3bf5338012bad8fa6bb9a3d4387e2aca676c5b9d/README_IMAGES/lot2.png)
+
+T-TEST to determine if the PSI across manufacturing lot 3 is statistically different from the population mean of 1,500 PSI
+
+![DELIVERABLE 3](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/3bf5338012bad8fa6bb9a3d4387e2aca676c5b9d/README_IMAGES/lot3.png)
+
 Then briefly summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.
 
 ## Study Design: MechaCar vs Competition
