@@ -2,6 +2,8 @@ library(dplyr)
 library(ggplot2)
 library(reshape2)
 install.packages("reshape2")
+install.packages("ggpubr")
+library(ggpubr)
 
 # DELIVERABLE 1
 df <- read.csv(file="MechaCar_mpg.csv", stringsAsFactors=FALSE)
@@ -48,16 +50,17 @@ ggplot(df) +
   geom_jitter(aes(ground_clearance,mpg), colour="red") + geom_smooth(aes(ground_clearance,mpg), method=lm, se=FALSE) +
   geom_jitter(aes(AWD,mpg), colour="black") + geom_smooth(aes(AWD,mpg), method=lm, se=FALSE) +
   geom_jitter(aes(vehicle_length,mpg), colour="orange") + geom_smooth(aes(vehicle_length,mpg), method=lm, se=FALSE) +
+  stat_regline_equation(x=30, y=310) +
   labs(x = "Measurement", y = "MPG)")
-
-
 
 require(ggplot2)
 require(reshape2)
 df_table = df
 setDT(df_table)
 df2 = melt(df_table, id.vars='mpg')
-ggplot(df2) +
+ggplot(data = df2, y=mpg, x=value) +
   geom_jitter(aes(value,mpg, colour=variable),) + geom_smooth(aes(value,mpg, colour=variable), method=lm, se=FALSE) +
   facet_wrap(~variable, scales="free_x") +
-  labs(x = "Measurement", y = "MPG")
+  stat_regline_equation(label.x=0.25, label.y=90, aes(y=mpg, x=value)) +
+  labs(x="Measurement", y="MPG") +
+  ylim(NA,100)
