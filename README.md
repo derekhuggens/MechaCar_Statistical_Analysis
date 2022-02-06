@@ -21,6 +21,8 @@ Syntax: source(https://www.rdocumentation.org/)
     singular.ok = TRUE, contrasts = NULL, offset, …)
 ```
 
+Example used:
+
 ```R 
   df <- read.csv(file="MechaCar_mpg.csv", stringsAsFactors=FALSE)
   model = lm(mpg ~ vehicle_weight + spoiler_angle + ground_clearance + AWD + vehicle_length, data = df)
