@@ -56,7 +56,7 @@ The slope is not zero as can be seen in the below linear regression plots and wi
 ![code of single linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/233e70375be169ceb7639716acf23a356d22ba97/README_IMAGES/mult_linear_regression_code.png)
 ![slope of single linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/233e70375be169ceb7639716acf23a356d22ba97/README_IMAGES/mult_linear_regression_plot_image.png)
 
-vehicle_weight measurements are in the 
+vehicle_weight measurement values are many factors larger than the other independent variable values so the weight measurements were scaled down 100x.
 ![code of mult linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/e7a6ada5803b33c61134e2fff04a8a61a3df9763/README_IMAGES/mult_linear_regression_code_reduced_weight.png)
 ![slope of mult linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/e7a6ada5803b33c61134e2fff04a8a61a3df9763/README_IMAGES/mult_linear_regression_reduced_weight.png)
 
