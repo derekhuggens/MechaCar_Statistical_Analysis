@@ -84,25 +84,43 @@ Write a short summary using screenshots from your total_summary and lot_summary 
 
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
+The current manufacturing data does meet this design specification of suspension coils not exceeding a variance of 100 PSI as can be seen above in the PSI_VARIANCE column of "Total Summary Statistics of Suspension Coil's PSI Values." The maximum variance for all manufacturing lots in total was 62.29356 PSI.
+
+For each lot individually, the design specification of suspension coils not exceeding a variance of 100 PSI is true for Lots 1 and 2, but not for lot 3. This can be seen above in the PSI_VARIANCE column of "Lot Summary Statistics of Suspension Coil's PSI Values." The PSI_VARIANCE of Lot 3 was 170.2861224.
+
 ## T-Tests on Suspension Coils
 
 T-TEST to determine if the PSI across all manufacturing lots is statistically different from the population mean of 1,500 PSI
 
 ![DELIVERABLE 3](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/e120b25de40702746ebbdbc45e66f9d6fbfeaa2a/README_IMAGES/one_sample_t_test.png)
 
+The p-value is 0.06028, so we would fail to reject our Null Hypothesis of Ho: mu = 1500 as p-value > 0.05, NOT STATISTICALLY SIGNIFICANT FROM POPULATION
+<br>
+<br>
+
 T-TEST to determine if the PSI across manufacturing lot 1 is statistically different from the population mean of 1,500 PSI
 
 ![DELIVERABLE 3](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/3bf5338012bad8fa6bb9a3d4387e2aca676c5b9d/README_IMAGES/lot1.png)
+
+The p-value is 1, so we would fail to reject our Null Hypothesis of Ho: mu = 1500 as p-value > 0.05, NOT STATISTICALLY SIGNIFICANT FROM POPULATION
+<br>
+<br>
 
 T-TEST to determine if the PSI across manufacturing lot 2 is statistically different from the population mean of 1,500 PSI
 
 ![DELIVERABLE 3](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/3bf5338012bad8fa6bb9a3d4387e2aca676c5b9d/README_IMAGES/lot2.png)
 
+The p-value is 0.6072, so we would fail to reject our Null Hypothesis of Ho: mu = 1500 as p-value > 0.05, NOT STATISTICALLY SIGNIFICANT FROM POPULATION
+<br>
+<br>
+
 T-TEST to determine if the PSI across manufacturing lot 3 is statistically different from the population mean of 1,500 PSI
 
 ![DELIVERABLE 3](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/3bf5338012bad8fa6bb9a3d4387e2aca676c5b9d/README_IMAGES/lot3.png)
 
-Then briefly summarize your interpretation and findings for the t-test results. Include screenshots of the t-test to support your summary.
+The p-value is 0.04168, so we would reject our Null Hypothesis of Ho: mu = 1500 as p-value < 0.05, STATISTICALLY SIGNIFICANT FROM POPULATION
+<br>
+<br>
 
 ## Study Design: MechaCar vs Competition
 
