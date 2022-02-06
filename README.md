@@ -7,6 +7,10 @@ By using the programming language, R, within an IDE known as RStudio, statistica
 
 ## Linear Regression to Predict MPG
 
+Head of read in .csv turned into a dataframe:
+
+![head_mpg](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/bef459e0d4ce3209a215c18be05032dce4741bc7/README_IMAGES/head_df_mpg.png)
+
 Using the lm() function to fit a regression model in R, a regresson analysis was formulated to predict vehicle miles per gallon.
 
 Syntax: source(https://www.rdocumentation.org/)
@@ -17,30 +21,54 @@ Syntax: source(https://www.rdocumentation.org/)
     singular.ok = TRUE, contrasts = NULL, offset, …)
 ```
 
-![Deliverable 1](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/ae465cc5578a857715b55b0984917000f5025569/README_IMAGES/deliverable1summary.png)
+```R 
+  df <- read.csv(file="MechaCar_mpg.csv", stringsAsFactors=FALSE)
+  model = lm(mpg ~ vehicle_weight + spoiler_angle + ground_clearance + AWD + vehicle_length, data = df)
+  summary(model)
+```
 
 ```R 
   model = lm(mpg ~ vehicle_weight + spoiler_angle + ground_clearance + AWD + vehicle_length, data = df)
 ```
+
+![Deliverable 1](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/ac8dbb6cc2c0cfadc4905b32bf36eeb657316392/README_IMAGES/deliverable_1_summary_highlighted.png)
+
 In the code above, 'model' was the variable assigned to the lm() function. Within the lm() function, six variables (i.e., columns) were passed in and the 'data' argument of the lm() function was assigned to 'df', a variable containing the read in .csv.
 
-Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 According to the summary statistics that are printed by the R function `summary()`, `summary(model)` provided `Residuals` data and a table with an index column of `Coefficients:` containing the `(Intercept)`, `vehicle_weight`, `spoiler_angle`, `ground_clearance`, `AWD`, and `vehicle_length` variables. `summary(model)` also provided four additional columns titled: `Estimate`,  `Std. Error`, `t value`, `Pr(>|t|)`.
 
 Looking to the `Pr(>|t|)` column, we can see that:
-* (Intercept) is the response variable (`mpg`).
-* vehicle_weight `Pr(>|t|)` = .0776 not significant > .05
-* spoiler_angle `Pr(>|t|)` = 0.3069 not significant >
-* ground_clearance `Pr(>|t|)` = 5.21e-08 significant < .05
-* AWD `Pr(>|t|)` = 0.1852 not significant > .05
-* vehicle_length `Pr(>|t|)` = 2.60e-12 significant < .05
+* (Intercept) is the response variable (`mpg`) and its `Pr(>|t|)` = 5.08e-08, statistically significant < 0.05
+* vehicle_weight `Pr(>|t|)` = .0776, not statistically significant > 0.05
+* spoiler_angle `Pr(>|t|)` = 0.3069 not statistically significant > 0.05
+* ground_clearance `Pr(>|t|)` = 5.21e-08 statistically significant < 0.05
+* AWD `Pr(>|t|)` = 0.1852 not statistically significant > 0.05
+* vehicle_length `Pr(>|t|)` = 2.60e-12 statistically significant < 0.05
 
-Together, vehicle_weight, spoiler_angle, and AWD predictor variables are redundant to the model.
+Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
+
+Together, vehicle_weight, spoiler_angle, and AWD predictor variables, having p-values < 0.05, are redundant to the model. Whereas vehicle_length, ground clearance, and intercept are not redundant, having p-values > 0.05 and provide a non-random amount of variance to the mpg value.
 
 Is the slope of the linear model considered to be zero? Why or why not?
 
+The slope is not zero as can be seen in the below linear regression plots and within `summary(model)` above, the `Pr(>|t|)` of (Intercept) is statistically significant, or not equal to zero.
+
+![code of single linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/233e70375be169ceb7639716acf23a356d22ba97/README_IMAGES/mult_linear_regression_code.png)
+![slope of single linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/233e70375be169ceb7639716acf23a356d22ba97/README_IMAGES/mult_linear_regression_plot_image.png)
+
+vehicle_weight measurements are in the 
+![code of mult linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/e7a6ada5803b33c61134e2fff04a8a61a3df9763/README_IMAGES/mult_linear_regression_code_reduced_weight.png)
+![slope of mult linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/e7a6ada5803b33c61134e2fff04a8a61a3df9763/README_IMAGES/mult_linear_regression_reduced_weight.png)
+
+![code of multiple linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/233e70375be169ceb7639716acf23a356d22ba97/README_IMAGES/complete_per_var_regression_plot_code.png)
+![slope of multiple linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/233e70375be169ceb7639716acf23a356d22ba97/README_IMAGES/complete_per_var_regression_plots.png)
+
+
 Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
-With an adjusted R-squared of 0.6825 we can say that the multiple linear regression model predicts mpg effectively
+
+With a Multiple R-squared of 0.7149033 and adjusted R-squared of 0.6825 we can say that the multiple linear regression model predicts mpg "Moderately" according to Pearson's Correlation. 
+
+![r-squared multiple linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/e64b74a5830f87dc043fec36d7ee60fc72890651/README_IMAGES/deliverable_1_summary_highlighted_r_squared.png)
 
 ### Summary Statistics on Suspension Coils
 
