@@ -1,7 +1,7 @@
 # MechaCar_Statistical_Analysis
 Prototype Vehicle: Statistical Analysis with R
 
-By using the programming language, R, within an IDE known as RStudio, statistical measures for two .csv datasets were acquired. The library `dplyr`, a dataframe manipulation package, was imported and each .csv was read into a dataframe using `read.csv(file=, stringsAsFactors=FALSE)`.
+By using the programming language, R, within an IDE known as RStudio, statistical measures for two .csv datasets were acquired. The library `dplyr`, a dataframe manipulation package, was imported and each .csv was read into a dataframe using: <br>`read.csv(file=, stringsAsFactors=FALSE)`.
 
 ## Overview of Analysis
 
