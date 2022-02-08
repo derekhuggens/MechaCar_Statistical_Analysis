@@ -130,10 +130,13 @@ Statistical studies that a company could pursue in the design and deployment of 
 
 Possible statistical (alternate) hypotheses:
 
-Would adding a rear spoiler generate more positive visual reviews? (See above visual appreciation category)
-Is there a relationship between having a rear spoiler and generating more downward-force? (See above speed category)
-Can using wider factory tires generate faster braking distance times? (See above safety category)
-Can using forced-induction improve engine efficiency over increasing engine displacement size? (See above speed category)
+Would adding a rear spoiler generate more positive visual reviews? (See visual appreciation category below) Reviews, from a 1-10 rating or 1-5 stars can be turned into frequency nominal data or total count. Can compare different survey groups to test samples compared to the total population using t-tests.
+Is there a relationship between having a rear spoiler and generating more downward-force? (See speed category below) Multiple wind-tunnel runs of the same vehicle with different spoiler designs (groups) could be done to compare downward-force measurements between them using ANOVA.
+
+More alternative hypothese examples:
+
+Can using wider factory tires generate faster braking distance times? (See safety category below)
+Can using forced-induction improve engine efficiency over increasing engine displacement size? (See speed category below)
 
 Respective null hypotheses for the above would be that no effect or relationship exists between variables or predictions.
 
