@@ -72,7 +72,7 @@ With a Multiple R-squared of 0.7149033 and adjusted R-squared of 0.6825 we can s
 
 ![r-squared multiple linear regression model](https://github.com/derekhuggens/MechaCar_Statistical_Analysis/blob/e64b74a5830f87dc043fec36d7ee60fc72890651/README_IMAGES/deliverable_1_summary_highlighted_r_squared.png)
 
-### Summary Statistics on Suspension Coils
+## Summary Statistics on Suspension Coils
 
 Total Summary Statistics of Suspension Coil's PSI Values
 
